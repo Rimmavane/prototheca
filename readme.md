@@ -1,12 +1,12 @@
-#Purpose
+# Purpose
 Theses scripts written in python 3 allow for proteome comparison between different species, analysis of InterProScan results and generation of nice bar diagrams.
 
-#Requirements
+# Requirements
 
 Required packages are stated in `requirements.txt` file, you can install them with command:
 `pip install -r requirements.txt`
 
-#How to use
+# How to use
 The main script is `run.py`, it can be used from the console with command `python run.py`.
 It takes different arguments depend on which type of analysis we want to execute.
 
@@ -25,14 +25,14 @@ List of arguments:
 - `-e --e_cutoff` negative value of power of e in BLAST hits e-value. By default set to 10, it means all hits with e-value higer than e^-10 will be ignored.
 - `-tex --use_tex` if set to True charts will use LaTeX - names of organisms will be italicized and font will be more readable.
 
-#Results
+# Results
 Each type of analysis returns `proteomes_statistics.txt` file that includes number and avarage length of proteins in each proteome.
 
 - 'org' returns file `cross_results.txt` and a FASTA files with extension `.unique` for each organism with proteins that had zero blast hits with e-value below specified threshold - those are proteins unique for those organism.
 - 'base' returns plot for each provided database, with how many proteins from each organism had blast hit to that database. It also returns a file `base_results.txt` that include these statistics.
 - 'inter' returns plot for each InterProScan resource, with how many proteins from each organism had blast hit to that resource.
 
-#Examples
+# Examples
 - example 'org' analysis can be started with command:
 `run.py -f A.fasta B.fasta C.fasta D.fasta -r A B C "D organism" -t org -b A_against_BCD.blast B_against_ACD.blast C_against_ABD.blast D_against_ABC.blast -e 5`
 Note that if you want to include space in organism name in `-r` argument, you have to put it in quotes (like "D organism"). Also files in `-f` `-r` and `-r` arguments have to come in the same order - first files and name describes first organism, second in order describes another and etc. 
