@@ -5,7 +5,7 @@ Theses scripts written in python 3 allow for proteome comparison between differe
 
 Required packages are stated in `requirements.txt` file, you can install them with command:
 
-`pip install -r requirements.txt'
+`pip install -r requirements.txt`
 
 # How to use
 The main script is `run.py`, it can be used from the console with command `python run.py`.
