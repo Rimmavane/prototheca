@@ -38,10 +38,10 @@ Each type of analysis returns `proteomes_statistics.txt` file that includes numb
 
 `run.py -f A.fasta B.fasta C.fasta D.fasta -r A B C "D organism" -t org -b A_against_BCD.blast B_against_ACD.blast C_against_ABD.blast D_against_ABC.blast -e 5`
 
-Note that if you want to include space in organism name in `-r` argument, you have to put it in quotes (like "D organism"). Also files in `-f` `-r` and `-r` arguments have to come in the same order - first files and name describes first organism, second in order describes another and etc. 
+Note that if you want to include space in organism name in `-r` argument, you have to put it in quotes (like "D organism"). Also files in `-f` `-r` and `-r` arguments have to come in the same order - first files and name describes first organism, second in order describes another organism etc. 
 
 The outcome of the code will be files already stated in Results section. 
-In `cross_results.txt` each line is build in a manner "<organism> <list of organisms> <number>". 
+In `cross_results.txt` each line is build in a manner "\<organism\> \<list of organisms\> \<number\>". 
 It describes how many proteins (<number>) from <organism> had valid (with e-value below 1\*e^-5) hit from all of the organisms stated in <list of organisms>.
 Each file with `.unique` extension is based on FASTA file of proteome of corresponding organism, but it contains only those sequences that did not have any blast hit to any other analysed organism (with e-value below 1\*e^-5).
 
