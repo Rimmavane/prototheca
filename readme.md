@@ -20,7 +20,7 @@ List of arguments:
   - 'inter' - This type just needs InterProScan results files in .tsv format. Requires minimum -f, -r, -ips arguments.
 - `-b --blast_results` names of files that contains results of BLAST analysis 
 - `-ips --interproscan` this argument takes names of .tsv files that contains results of InterProScan
-- `-a --interproscan_analysis` it is optional argument in which you can set InterProScan analysis you are interested in. If none provided, the first provided InterProScan results file will be scanned and all found analysis will be considered.\
+- `-a --interproscan_analysis` it is optional argument in which you can set InterProScan analysis you are interested in. If none provided, the first provided InterProScan results file will be scanned and all found analysis will be considered.
 - `-db --databases` takes files of bases in FASTA format.
 - `-db_names --databases_names` names of databases in a manner that will appear in files and on charts.
 - `-e --e_cutoff` negative value of power of e in BLAST hits e-value. By default set to 10, it means all hits with e-value higer than e^-10 will be ignored.
@@ -42,8 +42,8 @@ Note that if you want to include space in organism name in `-r` argument, you ha
 
 The outcome of the code will be files already stated in Results section. 
 In `cross_results.txt` each line is build in a manner "<organism> <list of organisms> <number>". 
-It describes how many proteins (<number>) from <organism> had valid (with e-value below 1*e^-5) hit from all of the organisms stated in <list of organisms>.
-Each file with `.unique` extension is based on FASTA file of proteome of corresponding organism, but it contains only those sequences that did not have any blast hit to any other analysed organism (with e-value below 1*e^-5).
+It describes how many proteins (<number>) from <organism> had valid (with e-value below 1\*e^-5) hit from all of the organisms stated in <list of organisms>.
+Each file with `.unique` extension is based on FASTA file of proteome of corresponding organism, but it contains only those sequences that did not have any blast hit to any other analysed organism (with e-value below 1\*e^-5).
 
 - example 'base' analysis can be started with command:
 
